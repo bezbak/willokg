@@ -3,7 +3,7 @@ import { contacts } from "@/data/content";
 
 export function FooterSection() {
   return (
-    <footer className="footer-section" id="footer">
+    <footer className="footer-section" id="о-нас">
       <div className="footer-inner">
         <div className="footer-logo">WILLO</div>
         <h2>ГОТОВЫ ОБСУДИТЬ ВАШУ ЗАДАЧУ?</h2>

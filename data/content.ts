@@ -1,13 +1,21 @@
 export const navItems = ["ДИЗАЙН", "СЕРВЕРЫ", "ПЛАНЫ", "О НАС"];
 
 export const heroCards = [
-  { title: "Brand", image: "/images/hero-01.jpg" },
-  { title: "Motion", image: "/images/hero-02.jpg" },
-  { title: "Studio", image: "/images/hero-03.jpg" },
-  { title: "Neon", image: "/images/hero-04.jpg" },
-  { title: "Product", image: "/images/hero-05.jpg" },
-  { title: "Vision", image: "/images/hero-06.jpg" },
-  { title: "Fashion", image: "/images/hero-07.jpg" },
+  { title: "Motion Tools", image: "/images/hero-motion-tools.jpg" },
+  { title: "House Promo", image: "/images/hero-house.jpg" },
+  { title: "Concert Promo", image: "/images/hero-concert.jpg" },
+  { title: "Dental Promo", image: "/images/hero-braces.jpg" },
+  { title: "Travel Egypt", image: "/images/hero-egypt.jpg" },
+  { title: "Moto Event", image: "/images/hero-moto.jpg" },
+  { title: "Garden Promo", image: "/images/hero-garden.jpg" },
+  { title: "Avatar Promo", image: "/images/hero-avatar.jpg" },
+  { title: "Karakol Tour", image: "/images/hero-karakol.jpg" },
+  { title: "Family Promo", image: "/images/hero-parents.jpg" },
+  { title: "Uzbekistan Tour", image: "/images/hero-tour.jpg" },
+  { title: "Development Studio", image: "/images/hero-dev-office.jpg" },
+  { title: "Dashboard UI", image: "/images/hero-dashboard.jpg" },
+  { title: "Architecture UI", image: "/images/hero-architecture.jpg" },
+  { title: "3D Motion", image: "/images/hero-neon.jpg" },
 ];
 
 export const expertiseCards = [
@@ -59,6 +67,6 @@ export const pricingPlans = [
 
 export const contacts = {
   email: "HELLO@WILLO.DESIGN",
-  phone: "+996 700 123 456",
+  phone: "+996 999 151 000",
   address: "УЛ. ИБРАИМОВА 115/1",
 };

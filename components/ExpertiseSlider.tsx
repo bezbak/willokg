@@ -16,7 +16,11 @@ export function ExpertiseSlider() {
       centeredSlides
       grabCursor
       loop
+      loopAdditionalSlides={expertiseCards.length}
+      initialSlide={2}
+      watchSlidesProgress
       slidesPerView="auto"
+      spaceBetween={0}
       speed={900}
       autoplay={{ delay: 2100, disableOnInteraction: false }}
       pagination={{ clickable: true }}
@@ -27,7 +31,7 @@ export function ExpertiseSlider() {
         <SwiperSlide key={card.label} className="expertise-slide">
           <article className="expertise-card">
             <span className="card-fallback" />
-            <SmartImage src={card.image} alt={card.label} fill sizes="(max-width: 768px) 62vw, 260px" className="object-cover" />
+            <SmartImage src={card.image} alt={card.label} fill sizes="(max-width: 768px) 62vw, 260px" className="object-cover" priority />
             <h3>
               {card.title.split("\n").map((line) => (
                 <span key={line}>{line}</span>

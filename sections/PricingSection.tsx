@@ -9,7 +9,7 @@ export function PricingSection() {
       <h2>ПАКЕТЫ</h2>
       <motion.div
         className="pricing-grid"
-        initial="hidden"
+        initial="visible"
         whileInView="visible"
         viewport={{ once: true, margin: "-12% 0px" }}
         variants={{

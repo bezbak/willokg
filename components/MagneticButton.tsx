@@ -9,7 +9,9 @@ type MagneticButtonProps = PropsWithChildren<{
   href?: string;
 }>;
 
-export function MagneticButton({ children, className = "", href = "#footer" }: MagneticButtonProps) {
+const writeHref = "https://wa.me/996999151000";
+
+export function MagneticButton({ children, className = "", href = writeHref }: MagneticButtonProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 220, damping: 18, mass: 0.4 });

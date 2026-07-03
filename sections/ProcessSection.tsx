@@ -1,10 +1,9 @@
 "use client";
 
 import { processSteps } from "@/data/content";
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 export function ProcessSection() {
@@ -12,11 +11,10 @@ export function ProcessSection() {
     <section className="process-section">
       <h2>ПРОЦЕСС РЕАЛИЗАЦИИ:</h2>
       <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
-        effect="fade"
-        loop
-        speed={760}
-        autoplay={{ delay: 2800, disableOnInteraction: false }}
+        modules={[Pagination]}
+        rewind
+        slidesPerView={1}
+        speed={540}
         pagination={{ clickable: true }}
         className="process-swiper"
       >
