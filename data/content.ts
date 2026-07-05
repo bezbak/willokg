@@ -26,7 +26,64 @@ export const expertiseCards = [
   { title: "КОДИНГ\nBACKEND", label: "Backend", image: "/images/expertise-backend.jpg" },
 ];
 
-export const partners = ["Google", "MBank", "Kulikov", "Avangard", "Nomad", "Bishkek"];
+export const clients = [
+  {
+    name: "Ош Мэрия",
+    mark: "ОШ",
+    primary: "ОШ",
+    secondary: "МЭРИЯ",
+    variant: "osh-city",
+  },
+  {
+    name: "Ош базар",
+    mark: "ОШ",
+    primary: "ОШ",
+    secondary: "БАЗАР",
+    variant: "osh-bazar",
+  },
+  {
+    name: "mask.kg",
+    mark: "mk",
+    primary: "mask",
+    secondary: ".kg",
+    variant: "mask",
+  },
+  {
+    name: "manas-town.kg",
+    mark: "M",
+    primary: "MANAS",
+    secondary: "TOWN.KG",
+    variant: "manas-town",
+  },
+  {
+    name: "Nurcinema",
+    mark: "N",
+    primary: "NUR",
+    secondary: "cinema",
+    variant: "nurcinema",
+  },
+  {
+    name: "Everlight",
+    mark: "EL",
+    primary: "EVER",
+    secondary: "light",
+    variant: "everlight",
+  },
+  {
+    name: "Skytrainer",
+    mark: "S",
+    primary: "SKY",
+    secondary: "trainer",
+    variant: "skytrainer",
+  },
+  {
+    name: "EliteHouse",
+    mark: "EH",
+    primary: "ELITE",
+    secondary: "HOUSE",
+    variant: "elitehouse",
+  },
+] as const;
 
 export const processSteps = [
   {
@@ -48,20 +105,53 @@ export const processSteps = [
 
 export const pricingPlans = [
   {
-    name: "БАЗОВЫЙ",
-    price: "20,0$",
-    features: ["UI/UX АУДИТ САЙТА", "БАЗОВАЯ АНИМАЦИЯ", "SHARED ИНФРАСТРУКТУРА", "ПОДДЕРЖКА В ЧАТЕ"],
+    name: "START",
+    price: "от 399$",
+    description: "Для малого бизнеса и стартапов",
+    features: [
+      "Одностраничный сайт",
+      "UI/UX дизайн",
+      "Адаптация под телефон",
+      "До 5 страниц",
+      "Telegram интеграция",
+      "Базовое SEO",
+      "Годовой сервер",
+      "SSL сертификат",
+      "До 14 дней поддержки",
+    ],
   },
   {
-    name: "ПОПУЛЯРНЫЙ",
-    price: "49,0$",
+    name: "BUSINESS",
+    price: "от 799$",
+    description: "Самый популярный",
     featured: true,
-    features: ["ПРОЕКТ ИНТЕРФЕЙСОВ", "КОММЕРЧЕСКИЙ МОУШН", "ОТКАЗОУСТОЙЧИВЫЙ VPS", "AI CHAT BOT", "АРЕНДА СЕРВЕРОВ"],
+    features: [
+      "Корпоративный сайт",
+      "Интернет-магазин",
+      "CRM интеграция",
+      "Telegram Bot",
+      "AI функции",
+      "Панель администратора",
+      "Анимации",
+      "Всё из пакета START",
+      "До 30 дней поддержки",
+    ],
   },
   {
-    name: "ПРЕМИУМ",
-    price: "120,0$",
-    features: ["HIGH-END UI/UX ДИЗАЙН", "FULL-SCALE МОУШН", "ВЫДЕЛЕННЫЙ КЛАСТЕР", "ЛИЧНЫЙ МЕНЕДЖЕР 24/7", "ГРАФИЧЕСКИЙ ДИЗАЙН"],
+    name: "ENTERPRISE",
+    price: "от 2499$",
+    description: "Для крупных компаний",
+    features: [
+      "Индивидуальная разработка",
+      "Web + Mobile",
+      "CRM/ERP системы",
+      "AI решения",
+      "Автоматизация бизнеса",
+      "API интеграции",
+      "Выделенный сервер",
+      "Персональный менеджер",
+      "Поддержка 24/7",
+    ],
   },
 ];
 

@@ -327,21 +327,36 @@ img {
 }
 
 .partners-section {
-  padding: clamp(34px, 7vw, 70px) 0 clamp(34px, 6vw, 58px);
+  padding: clamp(42px, 7vw, 76px) 0 clamp(38px, 6vw, 64px);
   overflow: hidden;
-  background: #070707;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(183, 255, 32, 0.13), transparent 19rem),
+    radial-gradient(circle at 84% 100%, rgba(76, 196, 255, 0.11), transparent 17rem),
+    #070707;
+}
+
+.partners-title {
+  margin: 0 auto clamp(22px, 3vw, 34px);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: clamp(1.35rem, 3vw, 2.75rem);
+  font-weight: 950;
+  letter-spacing: 0.075em;
+  line-height: 0.95;
 }
 
 .marquee {
   mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  overflow: hidden;
+  padding: 4px 0;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  gap: clamp(34px, 6vw, 74px);
+  gap: clamp(14px, 2.6vw, 28px);
   align-items: center;
-  animation: marquee 24s linear infinite;
+  animation: marquee 34s linear infinite;
   will-change: transform;
 }
 
@@ -350,18 +365,161 @@ img {
 }
 
 .partner-logo {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(1.65rem, 4.5vw, 3.1rem);
-  font-weight: 900;
-  letter-spacing: -0.01em;
+  --logo-accent: var(--acid);
+  --logo-soft: rgba(183, 255, 32, 0.13);
+  --logo-ink: #050505;
+  --emblem-bg: linear-gradient(135deg, var(--logo-accent), #ffffff);
+  position: relative;
+  display: inline-flex;
+  width: clamp(220px, 23vw, 318px);
+  height: clamp(76px, 8vw, 98px);
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 16px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.105);
+  border-radius: 8px;
+  padding: 12px clamp(14px, 1.8vw, 20px);
+  color: rgba(255, 255, 255, 0.9);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 38%),
+    radial-gradient(circle at 18% 24%, var(--logo-soft), transparent 44%),
+    rgba(255, 255, 255, 0.035);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 18px 42px rgba(0, 0, 0, 0.34);
   line-height: 1;
   white-space: nowrap;
-  transition: opacity 240ms var(--ease-premium), transform 240ms var(--ease-premium), color 240ms var(--ease-premium);
+  transition:
+    border-color 240ms var(--ease-premium),
+    box-shadow 240ms var(--ease-premium),
+    transform 240ms var(--ease-premium);
+}
+
+.partner-logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.13), transparent);
+  opacity: 0;
+  transform: translateX(-40%);
+  transition: opacity 240ms var(--ease-premium), transform 540ms var(--ease-premium);
+}
+
+.partner-logo__emblem {
+  display: grid;
+  flex: 0 0 clamp(42px, 4.6vw, 58px);
+  width: clamp(42px, 4.6vw, 58px);
+  height: clamp(42px, 4.6vw, 58px);
+  place-items: center;
+  border-radius: 8px;
+  color: var(--logo-ink);
+  background: var(--emblem-bg);
+  box-shadow:
+    0 0 22px color-mix(in srgb, var(--logo-accent), transparent 58%),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  font-size: clamp(0.86rem, 1.25vw, 1.08rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.partner-logo__word {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.partner-logo__primary,
+.partner-logo__secondary {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.partner-logo__primary {
+  color: #fff;
+  font-size: clamp(1.12rem, 2vw, 1.82rem);
+  font-weight: 950;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.partner-logo__secondary {
+  color: color-mix(in srgb, var(--logo-accent), white 18%);
+  font-size: clamp(0.66rem, 1vw, 0.88rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .partner-logo:hover {
-  color: #fff;
-  transform: scale(1.055);
+  border-color: color-mix(in srgb, var(--logo-accent), transparent 42%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 20px 54px rgba(0, 0, 0, 0.42),
+    0 0 34px color-mix(in srgb, var(--logo-accent), transparent 72%);
+  transform: translateY(-3px);
+}
+
+.partner-logo:hover::after {
+  opacity: 1;
+  transform: translateX(42%);
+}
+
+.partner-logo--osh-city {
+  --logo-accent: #66e7ff;
+  --logo-soft: rgba(102, 231, 255, 0.16);
+  --emblem-bg: linear-gradient(135deg, #f8fbff, #66e7ff 74%);
+}
+
+.partner-logo--osh-bazar {
+  --logo-accent: #ffce45;
+  --logo-soft: rgba(255, 206, 69, 0.15);
+  --emblem-bg: linear-gradient(135deg, #fff6c7, #ffce45 68%, #ff6b35);
+}
+
+.partner-logo--mask {
+  --logo-accent: #b7ff20;
+  --logo-soft: rgba(183, 255, 32, 0.16);
+  --emblem-bg: linear-gradient(135deg, #b7ff20, #f4ffe3);
+}
+
+.partner-logo--mask .partner-logo__primary,
+.partner-logo--mask .partner-logo__secondary {
+  text-transform: none;
+}
+
+.partner-logo--manas-town {
+  --logo-accent: #ff5db8;
+  --logo-soft: rgba(255, 93, 184, 0.15);
+  --emblem-bg: linear-gradient(135deg, #ff5db8, #ffe3f3);
+}
+
+.partner-logo--nurcinema {
+  --logo-accent: #ff4d4d;
+  --logo-soft: rgba(255, 77, 77, 0.15);
+  --emblem-bg: linear-gradient(135deg, #fff, #ff4d4d 72%);
+}
+
+.partner-logo--everlight {
+  --logo-accent: #f7ff6a;
+  --logo-soft: rgba(247, 255, 106, 0.15);
+  --emblem-bg: linear-gradient(135deg, #f7ff6a, #fffef0);
+}
+
+.partner-logo--skytrainer {
+  --logo-accent: #54a8ff;
+  --logo-soft: rgba(84, 168, 255, 0.16);
+  --emblem-bg: linear-gradient(135deg, #54a8ff, #dff0ff);
+}
+
+.partner-logo--elitehouse {
+  --logo-accent: #ffffff;
+  --logo-soft: rgba(255, 255, 255, 0.12);
+  --logo-ink: #f7f7f2;
+  --emblem-bg: linear-gradient(135deg, #202020, #727272);
 }
 
 @keyframes marquee {
@@ -762,6 +920,14 @@ img {
   margin: 0 auto;
   perspective: 1200px;
   overflow: visible;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  --drag-offset: 0px;
+}
+
+.expertise-ring.is-dragging {
+  cursor: grabbing;
 }
 
 .expertise-ring-stage {
@@ -782,11 +948,12 @@ img {
   padding: 0;
   border: 0;
   background: transparent;
-  cursor: pointer;
+  cursor: inherit;
+  -webkit-tap-highlight-color: transparent;
 
   transform-style: preserve-3d;
   transform:
-    translate(-50%, -50%) translate3d(var(--x), 0, var(--z)) rotateY(var(--rotate-y)) scale(var(--scale));
+    translate(-50%, -50%) translate3d(calc(var(--x) + var(--drag-offset)), 0, var(--z)) rotateY(var(--rotate-y)) scale(var(--scale));
 
   opacity: var(--opacity);
   filter: brightness(var(--brightness)) blur(var(--blur));
@@ -795,6 +962,13 @@ img {
     transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1),
     opacity 900ms ease,
     filter 900ms ease;
+}
+
+.expertise-ring.is-dragging .expertise-ring-slide {
+  transition:
+    transform 90ms linear,
+    opacity 260ms ease,
+    filter 260ms ease;
 }
 
 .expertise-ring-slide[data-position="-2"] {

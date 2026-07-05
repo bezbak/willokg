@@ -7,9 +7,10 @@ export function PricingSection() {
   return (
     <section className="pricing-section" id="планы">
       <h2>ПАКЕТЫ</h2>
+
       <motion.div
         className="pricing-grid"
-        initial="visible"
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-12% 0px" }}
         variants={{
@@ -23,11 +24,25 @@ export function PricingSection() {
             className={`price-card ${plan.featured ? "featured" : ""}`}
             variants={{
               hidden: { opacity: 0, y: 42, scale: 0.96 },
-              visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] } },
+              visible: {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                transition: {
+                  duration: 0.72,
+                  ease: [0.22, 1, 0.36, 1],
+                },
+              },
             }}
           >
             <h3>{plan.name}</h3>
+
             <strong>{plan.price}</strong>
+
+            {plan.description && (
+              <p className="price-description">{plan.description}</p>
+            )}
+
             <ul>
               {plan.features.map((feature) => (
                 <li key={feature}>{feature}</li>

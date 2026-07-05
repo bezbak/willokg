@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Willo - цифровые решения для роста бизнеса",
   description:
     "Проектирование UI/UX, коммерческий моушн и серверные решения в премиальном dark neon стиле.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
+  },
   openGraph: {
     title: "Willo",
     description: "Цифровые решения для роста бизнеса",
